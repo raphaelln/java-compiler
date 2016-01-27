@@ -1,0 +1,55 @@
+<!doctype html>
+<html>
+	<head>
+		<title>Hello AngularJS</title>
+		<link href="/webjars/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet">
+		<link href="/webjars/dropzone/4.2.0/basic.css" rel="stylesheet">
+		<link href="/webjars/dropzone/4.2.0/dropzone.css" rel="stylesheet">
+		<link href="/webjars/font-awesome/4.5.0/css/font-awesome.min.css" rel="stylesheet">
+		<link href="/css/app.css" rel="stylesheet">
+	</head>
+
+	<body ng-app="app" >
+	
+		<nav class="navbar navbar-default" ng-controller="navigation">
+			<div class="container-fluid">
+				<div class="navbar-header">
+					<a class="navbar-brand" href="#/">Java Compiler</a>
+				</div>
+				<div id="navbar" class="navbar-collapse collapse">
+					<ul class="nav navbar-nav">
+						<li class="active" ng-class="{active:tab('home')}"><a href="#/">home</a></li>
+						<li ng-show="authenticated"><a href="#/upload">upload</a></li>
+					</ul>
+					<ul class="nav navbar-nav navbar-right">
+						<li ng-show="!authenticated">
+							<a class="small button" href="#/login" >
+    							<i class="fa fa-sign-out fa-lg"></i> Login
+    						</a> 
+    					</li>
+						<li ng-show="authenticated">
+							<a class="small button" href="" ng-click="logout()">
+    							<i class="fa fa-sign-out fa-lg"></i> Log Out
+    						</a> 
+    					</li>
+					</ul>
+				</div>
+				<!--/.nav-collapse -->
+			</div>
+			<!--/.container-fluid -->
+		</nav>
+		
+
+		<div  class="container" ng-view>
+	    </div>
+		
+		<script src="/webjars/angularjs/1.5.0-rc.0/angular.min.js" type="text/javascript"></script>
+		<script src="/webjars/angularjs/1.5.0-rc.0/angular-route.min.js" type="text/javascript"></script>
+		<script src="/webjars/angularjs/1.5.0-rc.0/angular-cookies.min.js" type="text/javascript"></script>
+		<script src="/webjars/dropzone/4.2.0/min/dropzone.min.js" type="text/javascript"></script>
+		<script src="js/app.js"  type="text/javascript"></script>
+		<script src="js/controllers/fileAppControllers.js"></script>
+		<script src="js/directives/fileAppDirectives.js"></script>
+		<script src="js/components/spinnerInterceptor.js"></script>
+	</body>
+</html>
