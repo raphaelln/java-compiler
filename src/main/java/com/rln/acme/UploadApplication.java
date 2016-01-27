@@ -15,10 +15,10 @@ import com.rln.acme.repository.RoleRepository;
 import com.rln.acme.repository.UserAccountRepository;
 
 @SpringBootApplication
-public class JavaCompilerApplication implements CommandLineRunner {
+public class UploadApplication implements CommandLineRunner {
 
     public static void main(String[] args) {
-        SpringApplication.run(JavaCompilerApplication.class, args);
+        SpringApplication.run(UploadApplication.class, args);
     }
 
     @Autowired
